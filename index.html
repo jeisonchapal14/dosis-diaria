@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Chamita</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background animated blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <!-- SPLASH SCREEN -->
+    <div id="splash-screen" class="splash-container">
+        <div class="splash-content">
+            <svg class="heart-icon-large" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h1>Una sorpresa<br>para mi chamita</h1>
+            <p>Hecho con mucho amor para ti</p>
+            <button id="start-btn" class="primary-btn">Descubrir</button>
+        </div>
+    </div>
+
+    <!-- MAIN APP CONTAINER -->
+    <div class="minimal-container hidden" id="main-app">
+        <header>
+            <h1>¿Cómo te sientes hoy?</h1>
+            <p>Selecciona tu dosis de amor</p>
+        </header>
+
+        <div class="mood-grid">
+            <button class="mood-btn" data-mood="sad">
+                <svg class="mood-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M15 9.5H15.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M9 9.5H9.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M8 15.5C8 15.5 9.5 13.5 12 13.5C14.5 13.5 16 15.5 16 15.5" stroke="currentColor"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Un poco desanimada
+            </button>
+            <button class="mood-btn" data-mood="stressed">
+                <svg class="mood-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M7 15H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M8.5 8L10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M15.5 8L14 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M15.5 4V2C15.5 2 15.5 1 12 1C8.5 1 8.5 2 8.5 2V4" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Con mucho estrés
+            </button>
+            <button class="mood-btn" data-mood="insecure">
+                <svg class="mood-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12 16C13.6569 16 15 14.6569 15 13H9C9 14.6569 10.3431 16 12 16Z" fill="currentColor" />
+                    <path d="M8.5 10H8.51" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M15.5 10H15.51" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                Insegura de mí misma
+            </button>
+            <button class="mood-btn" data-mood="hot">
+                <svg class="mood-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M11.28 2.3999C10.59 2.0599 9.80003 2.5099 9.71003 3.2699C9.55003 4.5499 9.06004 6.9499 7.04004 8.7999C4.54004 11.0899 3.00003 14.0799 4.11003 17.9299C4.30003 18.5999 4.88002 19.5799 5.86002 20.4699C7.43002 21.8999 9.61005 22.8499 12.44 21.9999C15.93 20.9599 18.73 17.6599 19.86 14.0199C20.65 11.4599 20.19 8.7699 18.9 6.4899C18.55 5.8799 17.72 5.9199 17.43 6.5799C17.26 6.9799 16.92 7.7999 16.29 8.5299C15.63 9.2999 14.86 9.6799 14.34 9.8799C13.9 10.0399 13.43 9.7799 13.33 9.3199C13.23 8.8199 13.08 7.5099 13.24 6.2599C13.41 4.9599 13.95 3.3299 11.28 2.3999Z"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M10.5899 13.9299C10.0299 14.4899 9.94985 15.3599 10.4299 15.9999C10.8799 16.5999 11.7599 16.7199 12.3599 16.2599C13.2299 15.5899 13.2799 14.2899 12.4699 13.5699C12.0299 13.1799 12.2399 12.2899 12.8099 12.2299C14.0299 12.1199 14.6199 13.2299 14.8299 14.3099C15.0099 15.2299 14.4799 16.1499 13.6299 16.6399M9.69995 19.3499L9.74995 19.3799M10.8899 18.4199L10.9699 18.4999M16.9899 11.8399L17.0699 11.9099"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Ganas de ti
+            </button>
+            <button class="mood-btn" data-mood="love">
+                <svg class="mood-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Dime cuánto me amas
+            </button>
+        </div>
+
+        <div class="footer-msg">
+            <p>Te amo, mi chamita 💕</p>
+            <button id="music-toggle" class="music-btn">🎵 Activar Música</button>
+        </div>
+
+        <div class="message-display hidden" id="message-container">
+            <div class="message-content">
+                <p id="phrase-text"></p>
+                <div class="action-buttons">
+                    <button class="secondary-btn" id="another-btn">Siguiente</button>
+                    <button class="secondary-btn" id="back-btn">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bg-music" src="./romantic-piano.mp3" loop preload="auto"></audio>
+    <script src="main.js" defer></script>
+</body>
+
+</html>
